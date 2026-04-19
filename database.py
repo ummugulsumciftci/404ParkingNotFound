@@ -86,3 +86,8 @@ def calculate_fee(entry_time_str, exit_time_str):
     elif hours <= 3: return 40.0
     elif hours <= 6: return 60.0
     else: return 100.0
+import hashlib
+
+def hash_password(password):
+    """Şifreyi güvenli bir şekilde hashler."""
+    return hashlib.sha256(password.encode()).hexdigest()
